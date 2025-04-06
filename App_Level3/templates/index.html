@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Food Waste Analysis App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/solar/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        #home-header {
+            background-color: #073642;
+            color: #fdf6e3;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #eee8d5;
+        }
+
+        #about, #external-links {
+            background-color: #002b36;
+            color: #fdf6e3;
+            padding: 40px 0;
+        }
+
+        #features .card {
+            background-color: #073642;
+            border-radius: 15px;
+            border: none;
+            color: #fdf6e3;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #features .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-warning {
+            background-color: #b58900;
+            border: none;
+            color: #002b36;
+        }
+
+        .btn-warning:hover {
+            background-color: #d99c00;
+        }
+
+        footer {
+            background-color: #073642;
+            color: #fdf6e3;
+            padding: 20px 0;
+        }
+
+        .social-icons a {
+            font-size: 1.8rem;
+            color: #fdf6e3;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #b58900;
+        }
+    </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <a class="navbar-brand p-0 m-0" href="/">
+          <img src="Logo.png" alt="Trash Logo" />
+        </a>
+        <div class="collapse navbar-collapse show" id="navbarColor01">
+          <ul class="navbar-nav d-flex flex-row gap-4 align-items-center m-0">
+            <li class="nav-item"><a class="nav-link" href="/tableau1">Global Food Waste</a></li>
+            <li class="nav-item"><a class="nav-link" href="/tableau2">Food Waste and Hunger</a></li>
+            <li class="nav-item"><a class="nav-link" href="/make_predictions">Interactive Exploration</a></li>
+            <li class="nav-item"><a class="nav-link" href="/report">Food Waste Report</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/about_us">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/works_cited">Works Cited</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<header id="home-header">
+    <div class="container">
+        <h1>Global Food Waste Analysis App</h1>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container text-center">
+        <h1>About This Project</h1>
+        <p class="mb-5"></p> 
+        <h5>This application analyzes global food waste patterns using real datasets. We seek to inform sustainable practices, highlight disparities, and bring awareness to food security challenges across nations. Learn more about the problem of food waste here:</h5>
+        <p class="mb-5"></p> 
+        <div class="ratio ratio-16x9">
+          <iframe 
+            src="https://www.youtube.com/embed/ishA6kry8nc" 
+            title="The Problem of Food Waste | Planet Forward ORIGINAL" 
+            frameborder="0" 
+            allowfullscreen>
+          </iframe>
+        </div>
+    </div>
+</section>
+<section id="explore" class="text-center py-3">
+  <div class="container">
+    <h3>Uncover the impact, explore the data, inspire change.</h3>
+        <h3>Explore the Website below:</h3>
+  </div>
+</section>
+<!-- Interactive tiles -->
+<section id="features" class="container my-5">
+  <div class="row text-center justify-content-center">
+    
+    <!-- Tableau 1 -->
+    <div class="col-md-4 mb-4">
+      <a href="/tableau1" class="text-decoration-none">
+        <div class="card p-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="card-img-top" alt="Tableau 1">
+          <div class="card-body">
+            <h3>Global Food Waste Data</h3>
+            <p>Explore food waste metrics across the globe.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Tableau 2 -->
+    <div class="col-md-4 mb-4">
+      <a href="/tableau2" class="text-decoration-none">
+        <div class="card p-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/2906/2906279.png" class="card-img-top" alt="Tableau 2">
+          <div class="card-body">
+            <h3>Food Waste and Hunger</h3>
+            <p>View data and information on food waste and hunger.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Tile 3: Data Visualizations -->
+    <div class="col-md-4 mb-4">
+      <a href="/ml" class="text-decoration-none">
+        <div class="card p-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/2721/2721298.png" class="card-img-top" alt="ML">
+          <div class="card-body">
+            <h3>Interactive Analysis</h3>
+            <p>Predict food waste data using our interative app.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center">
+    <p>&copy; 2025 Global Food Waste Analysis App. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

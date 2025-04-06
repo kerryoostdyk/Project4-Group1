@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- JS Imports -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Imports -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css">
+    <link href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1vIeIcH0Z8nSX5xxBni4a-1e8SZFBB8XyEg&s" width="50" height="50" class="rounded-circle mb-3" alt="Member 1">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="/">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/map">Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/works_cited">Works Cited</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <header class="bg-primary text-white text-center py-5">
+      <h1>UFO Sighting Data</h1>
+    <div class="container-fluid">
+      <!--<div class="row align-items-center">-->
+        <div class="row justify-content-center align-items-center">
+        <!--<div class="row">-->
+            <div class="col-md-3">
+              <small class="form-text text-dark">Select a minimum year to view sightings.</small>
+              <div class="d-flex align-items-center">
+               <!-- <div class="d-flex flex-column">  -->
+                <!--<label class="col-form-label" for="min-year">Min Year</label>-->
+               
+                <label for="min-year" class ="me-2">Min Year</label>
+                <input class="form-control" id="min-year" name="min-year" type="number" value="1949" min="1949" style="width: 150px;">
+                
+               </div> 
+            </div>
+              <div class="col-md-3">
+                <small class="form-text text-dark">Select a UFO shape to filter sightings.</small>
+                  <label for="UFO_Shape">UFO Shape</label>
+                  <select id="ufo-shape" name="ufo_shape">
+                    <option value="all" selected>All</option>
+                    <option value="Cylinder">Cylinder</option>
+                    <option value="Light">Light</option>
+                    <option value="Circle">Circle</option>
+                    <option value="Sphere">Sphere</option>
+                    <option value="Disk">Disk</option>
+                    <option value="Fireball">Fireball</option>
+                  </select>
+              </div>
+        </div>
+        </div>
+      <!--</div> --> 
+        <div class="row mt-2">
+          <div class="col-md-8">
+              <button type="button" class="btn btn-primary" id="filter-btn" style="background-color: #FF858D; color: white;">Filter!</button>
+        </div>
+        </div>
+        </div>
+         <hr>   
+            <!-- BAR -->
+            <div class="row">
+            <div class="col-md-6">
+                <div id="plot" ></div>
+            </div>
+           <!-- Scatter Plot -->
+           <div class="col-md-6">
+           <div id="scatter-plot"></div>  
+           </div>
+           </div>
+           <hr>
+           <!-- BAR(country) -->
+           <div class="row">
+           <div class="col-md-6">
+            <div id="barplot" ></div>
+        </div>
+        
+          
+           <!-- Bubble Chart -->
+            <div class="col-md-6">
+            <div id="bubble"></div> 
+          </div>
+          </div>
+          <hr>
+          <!-- Donut Chart -->
+          <div class="row">
+          <div class="col-md-6">
+            <div id="donut"></div> 
+          </div>
+        
+            <div class="col-md-6">
+                <!-- Table -->
+                <table id="ufosighting_table" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Season</th>
+                            <th>Country</th>
+                            <th>UFO_shape</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  
+    
+    </header>
+    <script src="static/js/app.js"></script> 
+
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2025 UFO Sighting Data App. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
