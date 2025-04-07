@@ -38,8 +38,13 @@ def works_cited():
     # Return template and data
     return render_template("works_cited.html")
 
-@app.route("/make_predictions", methods=["POST"])
-def make_predictions():
+@app.route("/make_predictions", methods=["GET"])
+def make_predictions_page():
+    return render_template("make_predictions.html")
+
+# Handles the POST request for predictions
+@app.route("/make_predictions_api", methods=["POST"])
+def make_predictions_api():
     content = request.json["data"]
     print(content)
 

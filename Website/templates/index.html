@@ -83,13 +83,13 @@
     <div class="container d-flex justify-content-center align-items-center">
       <div class="d-flex align-items-center gap-4">
         <a class="navbar-brand p-0 m-0" href="/index">
-          <img src="Logo.png" alt="Trash Logo" />
+          <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Trash Logo" />
         </a>
         <div class="collapse navbar-collapse show" id="navbarColor01">
           <ul class="navbar-nav d-flex flex-row gap-4 align-items-center m-0">
             <li class="nav-item"><a class="nav-link" href="/tableau1">Global Food Waste</a></li>
             <li class="nav-item"><a class="nav-link" href="/tableau2">Food Waste and Hunger</a></li>
-            <li class="nav-item"><a class="nav-link" href="/ml">Interactive Exploration</a></li>
+            <li class="nav-item"><a class="nav-link" href="/make_predictions">Interactive Exploration</a></li>
             <li class="nav-item"><a class="nav-link" href="/report">Food Waste Report</a></li>
             <li class="nav-item"><a class="nav-link active" href="/about_us">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="/works_cited">Works Cited</a></li>
