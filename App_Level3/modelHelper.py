@@ -1,22 +1,24 @@
 import pandas as pd
 import numpy as np
 import pickle
+import os
 
 class ModelHelper():
     def __init__(self):
-        pass
+        self.model_path = os.path.join(os.path.dirname(__file__), "waste_model_pipeline.h5")
+        with open(self.model_path, 'rb') as f:
+            self.model = pickle.load(f)
+
     def make_predictions(self, economic_loss, avg_waste, population, household_waste, country, year, food_category):
-        df=pd.DataFrame()
-        df["economic_loss"]=[economic_loss]
-        df["avg_waste"]=[avg_waste]
-        df["population"]=[population]
-        df["household_waste"]=[household_waste]
-        df["country"]=[country]
-        df["year"]=[year]
-        df["food_category"]=[food_category]
+        df = pd.DataFrame({
+            "economic_loss": [economic_loss],
+            "avg_waste": [avg_waste],
+            "population": [population],
+            "household_waste": [household_waste],
+            "country": [country],
+            "year": [year],
+            "food_category": [food_category]
+        })
 
-        model = pickle.load(open("waste_model_pipeline.h5", 'rb'))
-
-        preds = model.predict(df)
-
-        return(total_food_waste)
+        preds = self.model.predict(df)
+        return preds[0]

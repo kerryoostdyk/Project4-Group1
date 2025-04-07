@@ -36,7 +36,10 @@ function make_predictions() {
         success: function(returnedData) {
             console.log("Prediction Response:", returnedData);
             // You can display the result here too
-            $("#prediction-result").html(`<strong>Prediction:</strong> ${returnedData.prediction}`);
+            let formatted = parseFloat(returnedData.prediction).toFixed(2);
+            $("#prediction-result")
+                .html(`<strong>Predicted Food Waste (Tons)</strong> ${formatted}`)
+                .fadeIn(); 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);

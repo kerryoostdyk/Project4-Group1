@@ -99,12 +99,24 @@
         </a>
         <div class="collapse navbar-collapse show" id="navbarColor01">
           <ul class="navbar-nav d-flex flex-row gap-4 align-items-center m-0">
-            <li class="nav-item"><a class="nav-link" href="/tableau1">Global Food Waste</a></li>
-            <li class="nav-item"><a class="nav-link" href="/tableau2">Food Waste and Hunger</a></li>
-            <li class="nav-item"><a class="nav-link" href="/make_predictions">Interactive Exploration</a></li>
-            <li class="nav-item"><a class="nav-link" href="/report">Food Waste Report</a></li>
-            <li class="nav-item"><a class="nav-link active" href="/about_us">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="/works_cited">Works Cited</a></li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/tableau1' %}active{% endif %}" href="/tableau1">Global Food Waste</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/tableau2' %}active{% endif %}" href="/tableau2">Food Waste and Hunger</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/make_predictions' %}active{% endif %}" href="/make_predictions">Interactive Exploration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/report' %}active{% endif %}" href="/report">Food Waste Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/about_us' %}active{% endif %}" href="/about_us">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/works_cited' %}active{% endif %}" href="/works_cited">Works Cited</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -146,17 +158,20 @@
       <div class="col-md-2 team-member">
         <img src="https://avatars.githubusercontent.com/u/184047303?v=4" alt="Arya Maredia" />
         <h5 class="mt-3">Arya Maredia</h5>
+        <h6>Presentation Lead</h6>
         <a href="https://github.com/aryamaredia1" class="btn btn-outline-light">GitHub</a>
       </div>
       <div class="col-md-2 team-member">
         <img src="https://avatars.githubusercontent.com/u/183655507?v=4" alt="Caleb Meinke" />
         <h5 class="mt-3">Caleb Meinke</h5>
+        <h6>Web Development Lead</h6>
         <a href="https://www.linkedin.com/in/caleb-meinke-76b5011b7/" class="btn btn-outline-light">LinkedIn</a>
         <a href="https://github.com/calebmeinke" class="btn btn-outline-light">GitHub</a>
       </div>
       <div class="col-md-2 team-member">
         <img src="https://media.licdn.com/dms/image/v2/D4E03AQG9uxK0jZnX8A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727729046655?e=1749081600&v=beta&t=kI6cBueE7iHb7OoT4piGUPuTOEzDSUMBahP5R1YBZD4" alt="Kerry Oostdyk" />
         <h5 class="mt-3">Kerry Oostdyk</h5>
+        <h6>Machine Learning Lead</h6>
         <a href="https://www.linkedin.com/in/kerry-oostdyk-b0083032a/" class="btn btn-outline-light">LinkedIn</a>
         <a href="https://github.com/kerryoostdyk" class="btn btn-outline-light">GitHub</a>
       </div>
@@ -167,12 +182,14 @@
       <div class="col-md-2 team-member">
         <img src="https://avatars.githubusercontent.com/u/182821150?v=4" alt="Daniel Sterling" />
         <h5 class="mt-3">Daniel Sterling</h5>
+        <h6>Data Visualization Lead</h6>
         <a href="https://www.linkedin.com/in/daniel-sterling-ds613/" class="btn btn-outline-light">LinkedIn</a>
         <a href="https://github.com/CymbalOfJoy" class="btn btn-outline-light">GitHub</a>
       </div>
       <div class="col-md-2 team-member">
         <img src="https://avatars.githubusercontent.com/u/178948293?v=4" alt="Emily Wimmer" />
         <h5 class="mt-3">Emily Wimmer</h5>
+        <h6>Data Visualization Lead</h6>
         <a href="https://www.linkedin.com/in/emily-wimmer/" class="btn btn-outline-light">LinkedIn</a>
         <a href="https://github.com/eewimmer" class="btn btn-outline-light">GitHub</a>
       </div>

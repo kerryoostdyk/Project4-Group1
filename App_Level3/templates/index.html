@@ -9,9 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        .navbar-brand img {
-            height: 50px;
-        }
+        body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar-brand img {
+      height: 60px;
+      width: auto;
+    }
 
         #home-header {
             background-color: #073642;
@@ -87,12 +92,24 @@
         </a>
         <div class="collapse navbar-collapse show" id="navbarColor01">
           <ul class="navbar-nav d-flex flex-row gap-4 align-items-center m-0">
-            <li class="nav-item"><a class="nav-link" href="/tableau1">Global Food Waste</a></li>
-            <li class="nav-item"><a class="nav-link" href="/tableau2">Food Waste and Hunger</a></li>
-            <li class="nav-item"><a class="nav-link" href="/make_predictions">Interactive Exploration</a></li>
-            <li class="nav-item"><a class="nav-link" href="/report">Food Waste Report</a></li>
-            <li class="nav-item"><a class="nav-link active" href="/about_us">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="/works_cited">Works Cited</a></li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/tableau1' %}active{% endif %}" href="/tableau1">Global Food Waste</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/tableau2' %}active{% endif %}" href="/tableau2">Food Waste and Hunger</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/make_predictions' %}active{% endif %}" href="/make_predictions">Interactive Exploration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/report' %}active{% endif %}" href="/report">Food Waste Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/about_us' %}active{% endif %}" href="/about_us">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/works_cited' %}active{% endif %}" href="/works_cited">Works Cited</a>
+            </li>
           </ul>
         </div>
       </div>

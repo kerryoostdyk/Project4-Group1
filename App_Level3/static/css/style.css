@@ -2,7 +2,30 @@
     height: 800px;
   }
 
-   
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  select,
+  input[type="number"] {
+    width: 100%;
+  }
+
+  label.form-label {
+    color: #fdf6e3;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .card-header {
+    background-color: transparent;
+    color: #fdf6e3;
+    font-weight: bold;
+    border-bottom: 1px solid #fdf6e3;
+    text-align: center;
+  }
+
+
  /* #alien {
     position: relative;
     top: 0px;
