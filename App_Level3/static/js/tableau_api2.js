@@ -22,10 +22,8 @@ $(document).ready(function() {
 
 function initializeViz() {
     var placeholderDiv = document.getElementById("tableauViz");
-    var url = "PUT DASHBOARD LINK HERE";
+    var url = "https://public.tableau.com/shared/8MKKCWTJS?:display_count=n&:origin=viz_share_link";
     var options = {
-        // width: placeholderDiv.offsetWidth,
-        // height: placeholderDiv.offsetHeight,
         hideTabs: true,
         hideToolbar: true,
         onFirstInteractive: function() {
