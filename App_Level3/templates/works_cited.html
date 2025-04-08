@@ -57,12 +57,53 @@
     .list-group-item span {
       color: #fdf6e3;
     }
+
+    .background-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 700px;
+      padding: 2rem;
+      background: linear-gradient(to right, rgba(0,43,54,0.8), rgba(0,43,54,0.4)),
+              url("{{ url_for('static', filename='images/cleanup.png') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fdf6e3;
+      border-radius: 10px;
+      padding: 2rem;
+      min-height: 600px;
+    }
+
+.background-section .list-group-item {
+  background-color: rgba(0, 43, 54, 0.65);
+  color: #fdf6e3;
+  border: none;
+}
+
+.background-section a {
+  color: #b58900;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #002b36;
+}
+
+.background-section a:hover {
+  color: #e3c880;
+}
+.background-section .list-group-item {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.background-section .list-group-item a {
+  font-size: 1.1rem;
+}
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
       <div class="d-flex align-items-center gap-4">
         <a class="navbar-brand p-0 m-0" href="/">
           <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Trash Logo" />
@@ -77,6 +118,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link {% if request.path == '/make_predictions' %}active{% endif %}" href="/make_predictions">Interactive Exploration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/technical_analysis' %}active{% endif %}" href="/technical_analysis">Technical Analysis</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {% if request.path == '/report' %}active{% endif %}" href="/report">Food Waste Report</a>
@@ -107,38 +151,44 @@
     </div>
   </div>
   <!-- Header -->
-  <header class="bg-primary text-white text-center py-5">
+  <header class="bg-primary text-white text-center py-1">
     <div class="container">
-      <h1>Works Cited</h1>
+      <h1>References</h1>
       <p class="lead">Sources and references used in the Global Food Waste Analysis App</p>
     </div>
   </header>
 
   <!-- References -->
-  <section class="container py-5">
-    <h2 class="mb-4 text-center">References</h2>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <span>Global Food Wastage Dataset (2018–2024):</span>
-        <a href="https://www.kaggle.com/datasets/atharvasoundankar/global-food-wastage-dataset-2018-2024/data" target="_blank">https://www.kaggle.com/datasets/atharvasoundankar/global-food-wastage-dataset-2018-2024/data</a>
-      </li>
-      <li class="list-group-item">
-        <span>GDP Growth (Annual %):</span>
-        <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" target="_blank">https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG</a>
-      </li>
-      <li class="list-group-item">
-        <span>Prevalence of Undernourishment (% of population):</span>
-        <a href="https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS?end=2022&start=2001&view=chart&year=2001" target="_blank">https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS</a>
-      </li>
-      <li class="list-group-item">
-        <span>Color Palette Generator:</span>
-        <a href="https://coolors.co/142532-c13050-2e7046-764f4a-eac33b-8eba99" target="_blank">https://coolors.co/142532-c13050-2e7046-764f4a-eac33b-8eba99</a>
-      </li>
-      <li class="list-group-item">
-        <span>ChatGPT - Support Tool:</span>
-        <a href="https://chatgpt.com/" target="_blank">https://chatgpt.com/</a>
-      </li>
-    </ul>
+  <section class="background-section py-5">
+    <div class="container d-flex justify-content-center">
+      <ul class="list-group" style="max-width: 800px; width: 100%;">
+        <li class="list-group-item bg-transparent">
+          <strong>♻️ Global Food Wastage Dataset (2018–2024):</strong>
+          <br>
+          <a href="https://www.kaggle.com/datasets/atharvasoundankar/global-food-wastage-dataset-2018-2024/data" target="_blank">https://www.kaggle.com/datasets/atharvasoundankar/global-food-wastage-dataset-2018-2024/data</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <strong>♻️GDP Growth (Annual %):</strong>
+          <br>
+          <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" target="_blank">https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <strong>♻️Prevalence of Undernourishment (% of population):</strong>
+          <br>
+          <a href="https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS" target="_blank">https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <strong>♻️Color Palette Generator:</strong>
+          <br>
+          <a href="https://coolors.co/142532-c13050-2e7046-764f4a-eac33b-8eba99" target="_blank">https://coolors.co/142532-c13050-2e7046-764f4a-eac33b-8eba99</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <strong>♻️ChatGPT - Support Tool:</strong>
+          <br>
+          <a href="https://chatgpt.com/" target="_blank">https://chatgpt.com/</a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- Footer -->

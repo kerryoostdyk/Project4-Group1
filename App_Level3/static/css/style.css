@@ -40,7 +40,31 @@
     border-bottom: 1px solid #fdf6e3;
     text-align: center;
   }
-
+  .background-section {
+    background: linear-gradient(to right, rgba(0,43,54,0.75), rgba(0,43,54,0.25)),
+                url("/static/images/cleanup.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fdf6e3;
+    border-radius: 10px;
+  }
+  
+  .background-section .list-group-item {
+    background-color: rgba(0, 43, 54, 0.65);
+    color: #fdf6e3;
+    border: none;
+  }
+  
+  .background-section a {
+    color: #b58900;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #002b36;
+  }
+  
+  .background-section a:hover {
+    color: #e3c880;
+  }
 
  /* #alien {
     position: relative;

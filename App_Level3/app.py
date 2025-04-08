@@ -28,6 +28,11 @@ def tableau2():
     # Return template and data
     return render_template("tableau2.html")
 
+@app.route("/technical_analysis")
+def technical_analysis():
+    # Return template and data
+    return render_template("technical_analysis.html")
+
 @app.route("/report")
 def report():
     # Return template and data

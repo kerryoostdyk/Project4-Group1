@@ -85,7 +85,7 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
       <div class="d-flex align-items-center gap-4">
         <a class="navbar-brand p-0 m-0" href="/">
           <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Trash Logo" />
@@ -100,6 +100,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link {% if request.path == '/make_predictions' %}active{% endif %}" href="/make_predictions">Interactive Exploration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/technical_analysis' %}active{% endif %}" href="/technical_analysis">Technical Analysis</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {% if request.path == '/report' %}active{% endif %}" href="/report">Food Waste Report</a>
