@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 function initializeViz() {
     var placeholderDiv = document.getElementById("tableauViz");
-    var url = "ADD TABLEAU LINK HERE";
+    var url = "https://public.tableau.com/views/MachineLearningforGlobalFoodWaste/MachineLearningStory?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
     var options = {
         hideTabs: true,
         hideToolbar: true,

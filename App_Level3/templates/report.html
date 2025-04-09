@@ -106,9 +106,22 @@
   <header class="bg-dark text-white text-center py-1">
     <div class="container">
       <br>
-      <h1>Placeholder for Report</h1>
+      <h1>Global Food Waste Project Report</h1>
+      <br>
+      <h5>See below for the detailed report containing the documentation, research,</h5>
+      <h5>and conclusions from the Global Food Waste analysis</h5>
+      <br>
     </div>
   </header>
+
+<!-- Report -->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-md-8 iframe-container">
+          <iframe class="pdf" src="{{ url_for('static', filename='project_4_report.pdf') }}" width="100%" height="1150"></iframe>
+      </div>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
