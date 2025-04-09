@@ -56,10 +56,22 @@
       font-size: 1.25rem;
     }
 
+    .background-section {
+      background: linear-gradient(to right, rgba(0,43,54,0.8), rgba(0,43,54,0.1)),
+                url("{{ url_for('static', filename='images/crop.png') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fdf6e3;
+      padding: 4rem 2rem;
+      border-radius: 10px;
+    }
+
     .team-member {
       padding: 1.5rem;
       border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(0, 43, 54, 0.8);
+      border: 1px solid rgba(181, 137, 0, 0.4);
       transition: transform 0.3s ease;
       margin-bottom: 2rem;
     }
@@ -144,6 +156,7 @@
   <!-- Header -->
   <header class="bg-dark text-white text-center py-1">
     <div class="container">
+      <br>
       <h1>About Our Team</h1>
       <br>
       <p class="lead">Meet the passionate developers behind the 2025 Global Food Waste Analysis App</p>
@@ -154,28 +167,31 @@
   </header>
 
   <!-- Team Section -->
-  <section class="container-fluid py-5">
-    <!-- Row 1 -->
-    <div class="row text-center justify-content-center mb-4">
-      <div class="col-md-2 team-member">
-        <img src="https://avatars.githubusercontent.com/u/178948293?v=4" alt="Emily Wimmer" />
-        <h5 class="mt-3">Emily Wimmer</h5>
-        <h6>Data Visualization Lead</h6>
-        <a href="https://www.linkedin.com/in/emily-wimmer/" class="btn btn-outline-light">LinkedIn</a>
-        <a href="https://github.com/eewimmer" class="btn btn-outline-light">GitHub</a>
-      </div>
-      <div class="col-md-2 team-member">
-        <img src="https://avatars.githubusercontent.com/u/184047303?v=4" alt="Arya Maredia" />
-        <h5 class="mt-3">Arya Maredia</h5>
-        <h6>Presentation Lead</h6>
-        <a href="https://github.com/aryamaredia1" class="btn btn-outline-light">GitHub</a>
-      </div>
-      <div class="col-md-2 team-member">
-        <img src="https://avatars.githubusercontent.com/u/182821150?v=4" alt="Daniel Sterling" />
-        <h5 class="mt-3">Daniel Sterling</h5>
-        <h6>Data Visualization Lead</h6>
-        <a href="https://www.linkedin.com/in/daniel-sterling-ds613/" class="btn btn-outline-light">LinkedIn</a>
-        <a href="https://github.com/CymbalOfJoy" class="btn btn-outline-light">GitHub</a>
+  <section class="py-5">
+    <div class="background-section">
+      <div class="container-fluid">
+        <!-- Row 1 -->
+        <div class="row text-center justify-content-center mb-4">
+        <div class="col-md-2 team-member">
+          <img src="https://avatars.githubusercontent.com/u/178948293?v=4" alt="Emily Wimmer" />
+          <h5 class="mt-3">Emily Wimmer</h5>
+          <h6>Data Visualization Lead</h6>
+          <a href="https://www.linkedin.com/in/emily-wimmer/" class="btn btn-outline-light">LinkedIn</a>
+          <a href="https://github.com/eewimmer" class="btn btn-outline-light">GitHub</a>
+        </div>
+        <div class="col-md-2 team-member">
+          <img src="https://avatars.githubusercontent.com/u/184047303?v=4" alt="Arya Maredia" />
+          <h5 class="mt-3">Arya Maredia</h5>
+          <h6>Presentation Lead</h6>
+          <a href="https://github.com/aryamaredia1" class="btn btn-outline-light">GitHub</a>
+        </div>
+        <div class="col-md-2 team-member">
+          <img src="https://avatars.githubusercontent.com/u/182821150?v=4" alt="Daniel Sterling" />
+          <h5 class="mt-3">Daniel Sterling</h5>
+          <h6>Data Visualization Lead</h6>
+          <a href="https://www.linkedin.com/in/daniel-sterling-ds613/" class="btn btn-outline-light">LinkedIn</a>
+          <a href="https://github.com/CymbalOfJoy" class="btn btn-outline-light">GitHub</a>
+        </div>
       </div>
     </div>
   

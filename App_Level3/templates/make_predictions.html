@@ -49,6 +49,18 @@
       display: inline-block;
     }
 
+    .predictor-background {
+    background: linear-gradient(to right, rgba(0, 43, 54, 0.8), rgba(0, 43, 54, 0.1)),
+              url("{{ url_for('static', filename='images/ml.png') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    min-height: 400px;
+    color: #fdf6e3;
+    border-radius: 10px;
+    }
+
   </style>
 </head>
 
@@ -107,6 +119,7 @@
   <!-- Header -->
   <header class="bg-dark text-white text-center py-1">
     <div class="container">
+      <br>
       <h1>Food Waste Prediction Tool</h1>
       <br>
       <p>Use the below inputs to generate the estimated tonnage of food waste by country for a given year!</p>
@@ -114,86 +127,86 @@
     </div>
   </header>
 
-  <div class="container d-flex justify-content-center align-items-start mt-5" style="min-height: 60vh;" style="min-height: 80vh;">
-    <div class="card border-primary p-4 w-100" style="max-width: 600px;">
-      <div class="card-header text-center">Food Waste Prediction Tool</div>
-      <div class="card-body">
-        <form>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="country" class="form-label">Country</label>
-              <select id="country" class="form-select">
-                <option value="Argentina">Argentina</option>
-                <option value="Australia">Australia</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Canada">Canada</option>
-                <option value="China">China</option>
-                <option value="France">France</option>
-                <option value="Germany">Germany</option>
-                <option value="India">India</option>
-                <option value="Indonesia">Indonesia</option>
-                <option value="Italy">Italy</option>
-                <option value="Japan">Japan</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Russia">Russia</option>
-                <option value="Saudi Arabia">Saudi Arabia</option>
-                <option value="South Africa">South Africa</option>
-                <option value="South Korea">South Korea</option>
-                <option value="Spain">Spain</option>
-                <option value="Turkey">Turkey</option>
-                <option value="UK">UK</option>
-                <option value="USA">USA</option>
-              </select>
+  <!--Predictor App-->
+  <div class="predictor-background py-5">
+    <div class="container d-flex justify-content-center align-items-start">
+      <div class="card border-primary p-4 w-100" style="max-width: 600px; background-color: rgba(7, 54, 66, 0.7); border-radius: 10px;">
+        <div class="card-header text-center">Food Waste Prediction Tool</div>
+        <div class="card-body">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" class="form-select">
+                  <option value="Argentina">Argentina</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Canada">Canada</option>
+                  <option value="China">China</option>
+                  <option value="France">France</option>
+                  <option value="Germany">Germany</option>
+                  <option value="India">India</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="Russia">Russia</option>
+                  <option value="Saudi Arabia">Saudi Arabia</option>
+                  <option value="South Africa">South Africa</option>
+                  <option value="South Korea">South Korea</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Turkey">Turkey</option>
+                  <option value="UK">UK</option>
+                  <option value="USA">USA</option>
+                </select>
 
-              <label for="year" class="form-label mt-3">Year</label>
-              <select id="year" class="form-select">
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-              </select>
+                <label for="year" class="form-label mt-3">Year</label>
+                <select id="year" class="form-select">
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
 
-              <label for="food_category" class="form-label mt-3">Food Category</label>
-              <select id="food_category" class="form-select">
-                <option value="Bakery Items">Bakery Items</option>
-                <option value="Beverages">Beverages</option>
-                <option value="Dairy Products">Dairy Products</option>
-                <option value="Frozen Food">Frozen Food</option>
-                <option value="Fruits & Vegetables">Fruits & Vegetables</option>
-                <option value="Grains & Cereals">Grains & Cereals</option>
-                <option value="Meat & Seafood">Meat & Seafood</option>
-                <option value="Prepared Food">Prepared Food</option>
-              </select>
+                <label for="food_category" class="form-label mt-3">Food Category</label>
+                <select id="food_category" class="form-select">
+                  <option value="Bakery Items">Bakery Items</option>
+                  <option value="Beverages">Beverages</option>
+                  <option value="Dairy Products">Dairy Products</option>
+                  <option value="Frozen Food">Frozen Food</option>
+                  <option value="Fruits & Vegetables">Fruits & Vegetables</option>
+                  <option value="Grains & Cereals">Grains & Cereals</option>
+                  <option value="Meat & Seafood">Meat & Seafood</option>
+                  <option value="Prepared Food">Prepared Food</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="economic_loss" class="form-label">Economic Loss (Million $)</label>
+                <input type="number" class="form-control" id="economic_loss" value="2000">
+                <label for="population" class="form-label mt-3">Population (Millions)</label>
+                <input type="number" class="form-control" id="population" value="2500">
+                <label for="avg_waste" class="form-label mt-3">Average Waste Per Capita (kg)</label>
+                <input type="number" class="form-control" id="avg_waste" value="2000">
+                <label for="household_waste" class="form-label mt-3">Household Waste (%)</label>
+                <input type="number" class="form-control" id="household_waste" value="2000">
+              </div>
             </div>
 
-            <div class="col-md-6">
-              <label for="economic_loss" class="form-label">Economic Loss (Million $)</label>
-              <input type="number" class="form-control" id="economic_loss" value="2000">
-
-              <label for="population" class="form-label mt-3">Population (Millions)</label>
-              <input type="number" class="form-control" id="population" value="2500">
-
-              <label for="avg_waste" class="form-label mt-3">Average Waste Per Capita (kg)</label>
-              <input type="number" class="form-control" id="avg_waste" value="2000">
-
-              <label for="household_waste" class="form-label mt-3">Household Waste (%)</label>
-              <input type="number" class="form-control" id="household_waste" value="2000">
+            <div class="text-center mt-4">
+              <button type="button" class="btn btn-warning px-4" id="filter">Make Prediction</button>
             </div>
-          </div>
 
-          <div class="text-center mt-4">
-            <button type="button" class="btn btn-warning px-4" id="filter">Make Prediction</button>
-          </div>
-
-          <div class="row mt-4">
-            <div class="col text-center">
-              <div id="prediction-result" class="alert alert-info" role="alert" style="display: none;"></div>
+            <div class="row mt-4">
+              <div class="col text-center">
+                <div id="prediction-result" class="alert alert-info" role="alert" style="display: none;"></div>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>
