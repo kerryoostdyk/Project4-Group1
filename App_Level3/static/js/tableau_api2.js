@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 function initializeViz() {
     var placeholderDiv = document.getElementById("tableauViz");
-    var url = "https://public.tableau.com/shared/8MKKCWTJS?:display_count=n&:origin=viz_share_link";
+    var url = "https://public.tableau.com/shared/5RZKG5ZCB?:display_count=n&:origin=viz_share_link";
     var options = {
         hideTabs: true,
         hideToolbar: true,
